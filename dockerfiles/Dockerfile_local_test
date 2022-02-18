@@ -4,20 +4,18 @@ FROM registry.nexdev.net:5050/docker/haproxy/haproxy-debian:2.4 AS base
 RUN apt-get update
 RUN apt-get install -y git
 # Make ssh dir
-RUN mkdir /root/.ssh/
-
 # Copy over private key, and set permissions
 # Warning! Anyone who gets their hands on this image will be able
 # to retrieve this private key file from the corresponding image layer
-ADD id_rsa /root/.ssh/id_rsa
-ADD id_rsa.pub /root/.ssh/id_rsa.pub
-RUN chmod 600 /root/.ssh/id_rsa /root/.ssh/id_rsa.pub
-RUN cat /root/.ssh/id_rsa
-RUN cat /root/.ssh/id_rsa.pub
+ADD repo-key /
+RUN \
+  chmod 600 /repo-key && \  
+  echo "IdentityFile /repo-key" >> /etc/ssh/ssh_config && \  
+  echo -e "StrictHostKeyChecking no" >> /etc/ssh/ssh_config
 # Create known_hosts
-RUN touch /root/.ssh/known_hosts
+#RUN touch /root/.ssh/known_hosts
 # Add bitbuckets key
-RUN ssh-keyscan gitlab.nexdev.net >> /root/.ssh/known_hosts
+#RUN ssh-keyscan gitlab.nexdev.net >> /root/.ssh/known_hosts
 # Clone the conf files into the docker container
 RUN git clone git@gitlab.nexdev.net:NEXOPS/haproxy/haproxy-default.git
 #############
