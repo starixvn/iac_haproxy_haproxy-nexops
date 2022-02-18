@@ -11,8 +11,8 @@ RUN mkdir /root/.ssh/ \
  && touch /root/.ssh/known_hosts \ 
  $$ ssh-keyscan gitlab.nexdev.net >> /root/.ssh/known_hosts
 # Clone the conf files into the docker container
-RUN mkdir -p /wherever/you/want/to/clone && cd /wherever/you/want/to/clone && \
-  --mount=type=ssh git clone git@gitlab.nexdev.net:NEXOPS/haproxy/haproxy-default.git
+RUN ls -l /root/.ssh/
+RUN --mount=type=ssh git clone git@gitlab.nexdev.net:NEXOPS/haproxy/haproxy-default.git
 #############
 COPY configs/local_test /usr/local/etc/haproxy/configs/local_test
 RUN ls /usr/local/etc/haproxy/configs/local_test
