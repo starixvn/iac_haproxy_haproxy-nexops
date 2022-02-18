@@ -7,7 +7,8 @@ RUN apt-get install -y git
 # Copy over private key, and set permissions
 # Warning! Anyone who gets their hands on this image will be able
 # to retrieve this private key file from the corresponding image layer
-ADD repo-key /
+RUN mkdir /repo-key
+ADD repo-key /repo-key/
 RUN ls -l /
 RUN chmod 600 /repo-key 
 RUN echo "IdentityFile /repo-key" >> /etc/ssh/ssh_config && \ 
