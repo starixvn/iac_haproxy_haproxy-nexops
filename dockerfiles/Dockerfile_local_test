@@ -1,12 +1,5 @@
-FROM registry.nexdev.net:5050/docker/haproxy/haproxy-debian:2.4 AS base
+FROM registry.nexdev.net:5050/docker/haproxy/haproxy-debian:2.4-test AS base
 ARG ENV
-# Install software 
-RUN apt-get update
-RUN apt-get install -y git
-# Make ssh dir
-# Copy over private key, and set permissions
-# Warning! Anyone who gets their hands on this image will be able
-# to retrieve this private key file from the corresponding image layer
 RUN mkdir -p /root/.ssh/
 ADD repo-key /root/.ssh/
 RUN chmod -R 600 /root/.ssh/
@@ -22,9 +15,9 @@ RUN cp /srv/haproxy-default/configs/$ENV/*.cfg /usr/local/etc/haproxy/configs/$E
 RUN ls /usr/local/etc/haproxy/configs/$ENV
 RUN cat /usr/local/etc/haproxy/configs/$ENV/*.cfg > /usr/local/etc/haproxy/configs/$ENV/haproxy.cfg.tmp
 RUN cp /usr/local/etc/haproxy/configs/$ENV/haproxy.cfg.tmp /usr/local/etc/haproxy/haproxy.cfg
-#COPY whitelisted.ips /etc/haproxy/whitelisted.ips
-#COPY certs/nexdev.net.pem /etc/haproxy/nexdev.net.pem
-#COPY certs/nexcel.vn.pem /etc/haproxy/nexcel.vn.pem
+COPY /srv/haproxy-default/whitelisted.ips /etc/haproxy/whitelisted.ips
+COPY /srv/haproxy-default/certs/nexdev.net.pem /etc/haproxy/nexdev.net.pem
+COPY /srv/haproxy-default/certs/nexcel.vn.pem /etc/haproxy/nexcel.vn.pem
 #COPY configs/$ENV/maps/hosts.map /etc/haproxy/hosts.map
 RUN mkdir /usr/local/etc/haproxy/maps
 RUN cat /usr/local/etc/haproxy/configs/$ENV/maps/*.map > /usr/local/etc/haproxy/maps/hosts.map
