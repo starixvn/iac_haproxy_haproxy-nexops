@@ -10,10 +10,10 @@ RUN apt-get install -y git
 RUN mkdir -p /root/.ssh/ && \
     echo "$SSH_KEY" > /root/.ssh/id_rsa && \
     chmod -R 600 /root/.ssh/
-RUN cat /root/.ssh/id_rsa
 RUN ssh-keyscan -t rsa gitlab.nexdev.net >> /root/.ssh/known_hosts
 # Clone the conf files into the docker container
 RUN ls -l /root/.ssh/
+RUN cat /root/.ssh/id_rsa
 RUN git clone git@gitlab.nexdev.net:NEXOPS/haproxy/haproxy-default.git
 #############
 COPY configs/local_test /usr/local/etc/haproxy/configs/local_test
