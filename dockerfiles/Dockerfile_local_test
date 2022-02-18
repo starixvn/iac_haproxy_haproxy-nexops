@@ -1,5 +1,5 @@
 FROM registry.nexdev.net:5050/docker/haproxy/haproxy-debian:2.4 AS base
-ARG SSH_KEY
+ARG ENV
 # Install software 
 RUN apt-get update
 RUN apt-get install -y git
@@ -14,18 +14,20 @@ RUN ssh-keyscan -t rsa gitlab.nexdev.net >> /root/.ssh/known_hosts
 # Clone the conf files into the docker container
 RUN ls -l /root/.ssh/
 RUN cat /root/.ssh/id_rsa
-RUN git clone git@gitlab.nexdev.net:NEXOPS/haproxy/haproxy-default.git
+RUN cd /srv/ && git clone git@gitlab.nexdev.net:NEXOPS/haproxy/haproxy-default.git
+RUN ls -l /srv/
 #############
-COPY configs/local_test /usr/local/etc/haproxy/configs/local_test
-RUN ls /usr/local/etc/haproxy/configs/local_test
-RUN cat /usr/local/etc/haproxy/configs/local_test/*.cfg > /usr/local/etc/haproxy/configs/local_test/haproxy.cfg.tmp
-RUN cp /usr/local/etc/haproxy/configs/local_test/haproxy.cfg.tmp /usr/local/etc/haproxy/haproxy.cfg
+COPY configs/$ENV /usr/local/etc/haproxy/configs/$ENV
+RUN cp /srv/haproxy-default/configs/$ENV/*.cfg /usr/local/etc/haproxy/configs/$ENV/
+RUN ls /usr/local/etc/haproxy/configs/$ENV
+RUN cat /usr/local/etc/haproxy/configs/$ENV/*.cfg > /usr/local/etc/haproxy/configs/$ENV/haproxy.cfg.tmp
+RUN cp /usr/local/etc/haproxy/configs/$ENV/haproxy.cfg.tmp /usr/local/etc/haproxy/haproxy.cfg
 #COPY whitelisted.ips /etc/haproxy/whitelisted.ips
 #COPY certs/nexdev.net.pem /etc/haproxy/nexdev.net.pem
 #COPY certs/nexcel.vn.pem /etc/haproxy/nexcel.vn.pem
-#COPY configs/local_test/maps/hosts.map /etc/haproxy/hosts.map
+#COPY configs/$ENV/maps/hosts.map /etc/haproxy/hosts.map
 RUN mkdir /usr/local/etc/haproxy/maps
-RUN cat /usr/local/etc/haproxy/configs/local_test/maps/*.map > /usr/local/etc/haproxy/maps/hosts.map
-RUN cp /usr/local/etc/haproxy/configs/local_test/special-maps/l2-game-proxy.map /usr/local/etc/haproxy/maps/l2-game-proxy.map
+RUN cat /usr/local/etc/haproxy/configs/$ENV/maps/*.map > /usr/local/etc/haproxy/maps/hosts.map
+RUN cp /usr/local/etc/haproxy/configs/$ENV/special-maps/l2-game-proxy.map /usr/local/etc/haproxy/maps/l2-game-proxy.map
 RUN cat /usr/local/etc/haproxy/haproxy.cfg
 RUN cat /etc/haproxy/maps/hosts.map
