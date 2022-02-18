@@ -7,13 +7,12 @@ RUN apt-get install -y git
 # Copy over private key, and set permissions
 # Warning! Anyone who gets their hands on this image will be able
 # to retrieve this private key file from the corresponding image layer
-RUN mkdir -p /root/.ssh/ && \
-    echo "$SSH_KEY" > /root/.ssh/id_rsa && \
-    chmod -R 600 /root/.ssh/
-RUN cat /root/.ssh/id_rsa
-RUN ssh-keyscan gitlab.nexdev.net >> /root/.ssh/known_hosts
+RUN mkdir /root/.ssh/ \
+ && touch /root/.ssh/known_hosts \ 
+ $$ ssh-keyscan gitlab.nexdev.net >> /root/.ssh/known_hosts
 # Clone the conf files into the docker container
-RUN git clone git@gitlab.nexdev.net:NEXOPS/haproxy/haproxy-default.git
+RUN mkdir -p /wherever/you/want/to/clone && cd /wherever/you/want/to/clone && \
+  --mount=type=ssh git clone git@gitlab.nexdev.net:NEXOPS/haproxy/haproxy-default.git
 #############
 COPY configs/local_test /usr/local/etc/haproxy/configs/local_test
 RUN ls /usr/local/etc/haproxy/configs/local_test
