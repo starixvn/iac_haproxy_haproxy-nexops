@@ -9,9 +9,9 @@ ARG SSH_KEY
 # to retrieve this private key file from the corresponding image layer
 RUN mkdir -p /root/.ssh/ && \
     echo "$SSH_KEY" > /root/.ssh/id_rsa && \
-    chmod -R 600 /root/.ssh/ && \
-    ssh-keyscan -t rsa gitlab.nexdev.net >> /root/.ssh/known_hosts
+    chmod -R 600 /root/.ssh/
 RUN cat /root/.ssh/id_rsa
+RUN ssh-keyscan -t rsa gitlab.nexdev.net >> /root/.ssh/known_hosts
 # Clone the conf files into the docker container
 RUN ls -l /root/.ssh/
 RUN git clone git@gitlab.nexdev.net:NEXOPS/haproxy/haproxy-default.git
