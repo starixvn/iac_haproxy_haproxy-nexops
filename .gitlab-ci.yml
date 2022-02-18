@@ -20,7 +20,7 @@ test:
     - echo "Compile and testing haproxy cfg ..."
     - docker login -u $docker_reg_user -p $docker_reg_pass $docker_reg_url
     - MY_KEY=${SSH_PRIVATE_KEY_1}\n${SSH_PRIVATE_KEY_2}\n${SSH_PRIVATE_KEY_3}
-    - DOCKER_BUILDKIT=1 docker build -f dockerfiles/Dockerfile_$DOCKERFILE_ENV -t haproxy-check-config --ssh default .
+    - docker build --build-arg SSH_KEY="$MY_KEY" -f dockerfiles/Dockerfile_$DOCKERFILE_ENV -t haproxy-check-config .
     - docker run --rm haproxy-check-config haproxy -c -V -f /etc/haproxy/haproxy.cfg
     - docker image rm -f haproxy-check-config
 
