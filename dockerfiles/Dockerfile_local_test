@@ -7,6 +7,7 @@ RUN cp /usr/local/etc/haproxy/configs/local_test/haproxy.cfg.tmp /usr/local/etc/
 #COPY certs/nexdev.net.pem /etc/haproxy/nexdev.net.pem
 #COPY certs/nexcel.vn.pem /etc/haproxy/nexcel.vn.pem
 #COPY configs/local_test/maps/hosts.map /etc/haproxy/hosts.map
+RUN mkdir /usr/local/etc/haproxy/maps
 RUN cat /usr/local/etc/haproxy/configs/local_test/maps/*.map > /usr/local/etc/haproxy/maps/hosts.map
 RUN cp /usr/local/etc/haproxy/configs/local_test/special-maps/l2-game-proxy.map /usr/local/etc/haproxy/maps/l2-game-proxy.map
 RUN cat /usr/local/etc/haproxy/haproxy.cfg
