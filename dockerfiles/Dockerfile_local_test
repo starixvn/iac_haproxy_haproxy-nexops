@@ -4,7 +4,6 @@ RUN mkdir -p /root/.ssh/
 ADD repo-key /root/.ssh/
 RUN chmod -R 600 /root/.ssh/
 RUN ssh-keyscan -t rsa gitlab.nexdev.net >> /root/.ssh/known_hosts
-# Clone the conf files into the docker container
 RUN ls -l /root/.ssh/
 RUN cat /root/.ssh/id_rsa
 RUN cd /srv/ && git clone git@gitlab.nexdev.net:NEXOPS/haproxy/haproxy-default.git
@@ -18,7 +17,6 @@ RUN cp /usr/local/etc/haproxy/configs/$ENV/haproxy.cfg.tmp /usr/local/etc/haprox
 RUN cp /srv/haproxy-default/whitelisted.ips /etc/haproxy/whitelisted.ips
 RUN cp /srv/haproxy-default/certs/nexdev.net.pem /etc/haproxy/nexdev.net.pem
 RUN cp /srv/haproxy-default/certs/nexcel.vn.pem /etc/haproxy/nexcel.vn.pem
-#COPY configs/$ENV/maps/hosts.map /etc/haproxy/hosts.map
 RUN mkdir /usr/local/etc/haproxy/maps
 RUN cat /usr/local/etc/haproxy/configs/$ENV/maps/*.map > /usr/local/etc/haproxy/maps/hosts.map
 RUN cp /usr/local/etc/haproxy/configs/$ENV/special-maps/l2-game-proxy.map /usr/local/etc/haproxy/maps/l2-game-proxy.map
