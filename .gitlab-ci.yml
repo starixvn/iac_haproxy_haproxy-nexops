@@ -1,3 +1,6 @@
+variables:
+  DOCKERFILE_ENV: "local_test"
+
 stages: 
   - test
   - deploy
