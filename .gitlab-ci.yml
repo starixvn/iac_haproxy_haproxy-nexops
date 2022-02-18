@@ -1,0 +1,26 @@
+stages: 
+  - test
+  - deploy
+
+############
+include:
+  - project: 'ci/common-ci'
+    file: 'haproxy-ci/deploy-vars.gitlab-ci.yml'
+  #- project: 'ci/common-ci'
+  #  file: 'haproxy-ci/deploy-rules.gitlab-ci.yml'
+
+############
+
+test:
+  stage: test
+  script:
+    - echo "Compile and testing haproxy cfg ..."
+    - docker login -u $docker_reg_user -p $docker_reg_pass $docker_reg_url
+    - docker build -f dockerfiles/Dockerfile_$DOCKERFILE_ENV -t haproxy-check-config .
+    - docker run --rm haproxy-check-config haproxy -c -V -f /etc/haproxy/haproxy.cfg
+    - docker image rm -f haproxy-check-config
+
+deploy:  
+  stage: deploy 
+  script:
+    - echo "Deployed!"
