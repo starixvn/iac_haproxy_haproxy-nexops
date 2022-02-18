@@ -12,7 +12,7 @@ RUN ls -l /srv/
 COPY configs/$ENV /usr/local/etc/haproxy/configs/$ENV
 RUN ls -l /srv/haproxy-default/configs
 RUN ls -l /srv/haproxy-default/configs/$ENV/
-RUN cp /srv/haproxy-default/configs/$ENV/00-global-default.cfg /usr/local/etc/haproxy/configs/$ENV/
+RUN cp /srv/haproxy-default/configs/$ENV/00-global-defaults.cfg /usr/local/etc/haproxy/configs/$ENV/
 RUN ls /usr/local/etc/haproxy/configs/$ENV
 RUN cat /usr/local/etc/haproxy/configs/$ENV/*.cfg > /usr/local/etc/haproxy/configs/$ENV/haproxy.cfg.tmp
 RUN cp /usr/local/etc/haproxy/configs/$ENV/haproxy.cfg.tmp /usr/local/etc/haproxy/haproxy.cfg
