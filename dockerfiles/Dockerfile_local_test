@@ -1,8 +1,8 @@
 FROM registry.nexdev.net:5050/docker/haproxy/haproxy-debian:2.4 AS base
 ARG SSH_KEY
 # Install software 
-#RUN apt-get update
-#RUN apt-get install -y git
+RUN apt-get update
+RUN apt-get install -y git
 # Make ssh dir
 # Copy over private key, and set permissions
 # Warning! Anyone who gets their hands on this image will be able
