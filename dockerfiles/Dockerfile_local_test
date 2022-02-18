@@ -1,4 +1,18 @@
 FROM registry.nexdev.net:5050/docker/haproxy/haproxy-debian:2.4 AS base
+
+# Install software 
+RUN apt-get install -y git
+# Make ssh dir
+RUN mkdir /root/.ssh/
+
+# Copy over private key, and set permissions
+# Warning! Anyone who gets their hands on this image will be able
+# to retrieve this private key file from the corresponding image layer
+ADD id_rsa /root/.ssh/id_rsa
+
+# Create known_hosts
+RUN touch /root/.ssh/known_hosts
+#############
 COPY configs/local_test /usr/local/etc/haproxy/configs/local_test
 RUN ls /usr/local/etc/haproxy/configs/local_test
 RUN cat /usr/local/etc/haproxy/configs/local_test/*.cfg > /usr/local/etc/haproxy/configs/local_test/haproxy.cfg.tmp
