@@ -1,5 +1,5 @@
 variables:
-  ENV: "prod"
+  ENV: "uat"
 
 stages: 
   - test
@@ -21,7 +21,7 @@ test:
     - docker login -u $docker_reg_user -p $docker_reg_pass $docker_reg_url
     #- MY_KEY=${SSH_PRIVATE_KEY_3}
     #- docker build --build-arg ENV="$DOCKERFILE_ENV" -f dockerfiles/Dockerfile_$DOCKERFILE_ENV -t haproxy-check-config .
-    - docker build --build-arg ENV="$ENV" -f Dockerfile -t haproxy-check-config .
+    - docker build --build-arg ENV="$ENV" -f dockerfiles/Dockerfile -t haproxy-check-config .
     - if docker run --rm haproxy-check-config haproxy -c -V -f /etc/haproxy/haproxy.cfg; then
           echo "Configuration file is valid...";
       else
