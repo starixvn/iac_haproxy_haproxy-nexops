@@ -1,1 +1,3 @@
-#
+#Tools
+haproxy.playthefun.com default_backend_nodes
+sentry.playthefun.com nexops_sentry_nodes
