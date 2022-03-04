@@ -9,5 +9,5 @@ test:
   script:
     - export DEPLOY_ENV=$(git diff --name-only HEAD HEAD~1)
     - echo $DEPLOY_ENV;
-    - export ENV="($(echo "$DEPLOY_ENV" | tr '/' '\n'))""
+    - export ENV="($(echo "$DEPLOY_ENV" | tr '/' '\n'))"
     - echo "${ENV[1]}"
