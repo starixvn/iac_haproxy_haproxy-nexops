@@ -9,10 +9,6 @@ test:
   script:
     - export DEPLOY_ENV=$(git diff --name-only HEAD HEAD~1)
     - echo $DEPLOY_ENV;
-    - chmod +x script.sh;
     - ls 
-    - /bin/sh script.sh
-    #- export STR="configs/uat1/nexops-tools.cfg" 
-    #- export IFS="/ " read -r -a array <<< "$STR" 
-    #- echo ${array[1]}
+    - str="configs/uat1/nexops-tools.cfg" | IFS="/ " read -r -a array <<< "$str" | echo ${array[1]}
     - echo "done"
