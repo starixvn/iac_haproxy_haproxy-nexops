@@ -50,3 +50,6 @@ deploy:
   stage: deploy 
   script:
       - echo "Deploying application...";
+  rules:
+    - if: '$DEPLOY_ENV == "sit"'
+      when: manual
