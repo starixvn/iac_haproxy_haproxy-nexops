@@ -11,8 +11,11 @@ test:
     - echo $DETECT_ENV_CHANGE
     - export DEPLOY_ENV=$(echo $DETECT_ENV_CHANGE | cut -d'/' -f2)
     - echo $DEPLOY_ENV;
-    - if [ "$DEPLOY_ENV" == "local" ]; then
-      export $ANSIBLE_JOB="480"; echo  $ANSIBLE_JOB;
+    - if [ "$DEPLOY_ENV" == "local" ]; then export $ANSIBLE_JOB="480";
+      fi;
+    - if [ "$DEPLOY_ENV" == "uat" ]; then export $ANSIBLE_JOB="494";
+      fi;
+    - echo  $ANSIBLE_JOB;
     - echo "Compile and testing haproxy cfg ..."
     - docker login -u $docker_reg_user -p $docker_reg_pass $docker_reg_url
     - docker build -f dockerfiles/Dockerfile_$DEPLOY_ENV -t haproxy-check-config .
