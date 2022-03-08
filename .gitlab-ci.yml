@@ -7,9 +7,9 @@ stages:
 test:
   stage: test
   script:
-    - export DETECT_ENV_CHANGE= $(git diff --name-only HEAD HEAD~1)
+    - export DETECT_ENV_CHANGE=$(git diff --name-only HEAD HEAD~1)
     - echo $DETECT_ENV_CHANGE
     - echo $DETECT_ENV_CHANGE | cut -d'/' -f2
-    - export $DEPLOY_ENV = echo $($DETECT_ENV_CHANGE | cut -d'/' -f2)
+    - export $DEPLOY_ENV=$($DETECT_ENV_CHANGE | cut -d'/' -f2)
     - echo $DEPLOY_ENV
-    - if $DEPLOY_ENV =~ local|uat|sit|aws; then echo "auto deploy"
+    - if $DEPLOY_ENV=~ local|uat|sit|aws; then echo "auto deploy"
