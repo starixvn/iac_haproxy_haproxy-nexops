@@ -61,4 +61,4 @@ deploy:
     - if: '$MANUAL_DEPLOY_ENV == "sit"'
       when: manual
     #- if: '$DEPLOY_ENV == "uat"'
-    #- when: always
+    - when: always
