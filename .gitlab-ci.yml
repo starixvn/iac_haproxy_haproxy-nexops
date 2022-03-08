@@ -9,6 +9,8 @@ test:
   script:
     - export DETECT_ENV_CHANGE=$(git diff --name-only HEAD HEAD~1)
     - echo $DETECT_ENV_CHANGE
+    - export ENV=$(git diff --name-only HEAD HEAD~1 | cut -d'/' -f2)
+    - echo $ENV;
     - echo $DETECT_ENV_CHANGE | cut -d'/' -f2
     - export $DEPLOY_ENV=$(echo $DETECT_ENV_CHANGE | cut -d'/' -f2)
     - echo $DEPLOY_ENV
