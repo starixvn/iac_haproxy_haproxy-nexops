@@ -51,5 +51,5 @@ deploy:
   script:
       - echo "Deploying application...";
   rules:
-    - if: echo $DEPLOY_ENV | grep -q "sit"
+    - if: 'echo $DEPLOY_ENV | grep -q "sit"'
       when: manual
