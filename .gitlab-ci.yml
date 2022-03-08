@@ -26,11 +26,11 @@ test:
 
 deploy:  
   stage: deploy
-  variables:
-    MANUAL_DEPLOY_ENV: "sit"
   script:
       - echo "Deploying application to $DEPLOY_ENV ...";
   rules:
-    - if: $DEPLOY_ENV == $MANUAL_DEPLOY_ENV
+    - if: '$DEPLOY_ENV == "sit"'
       when: manual
-    - when: always
+    - if: '$DEPLOY_ENV == "uat"'
+      when: always
+    #- when: always
