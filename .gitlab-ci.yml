@@ -41,9 +41,7 @@ test:
     - docker login -u $docker_reg_user -p $docker_reg_pass $docker_reg_url
     - docker build --build-arg ENV="$DEPLOY_ENV" -f dockerfiles/Dockerfile -t haproxy-check-config .
     - if docker run --rm haproxy-check-config haproxy -c -V -f /etc/haproxy/haproxy.cfg; then
-          echo "Configuration file is valid...";
+          docker image rm -f haproxy-check-config;
       else
           echo "Fatal errors found in configuration.";
       fi;
-    - docker run --rm haproxy-check-config haproxy -c -V -f /etc/haproxy/haproxy.cfg
-    - docker image rm -f haproxy-check-config
