@@ -54,7 +54,7 @@ test:
 deploy:  
   stage: deploy
   variables:
-    MANUAL_DEPLOY_ENV: "prod"
+    MANUAL_DEPLOY_ENV: prod
   script:
       - echo "Deploying application to $DEPLOY_ENV ...";
   rules:
