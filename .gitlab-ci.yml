@@ -28,6 +28,7 @@ test:
         elif echo $DEPLOY_ENV | grep -q "aws-nex3"; then export ANSIBLE_JOB=651;
         fi;
       elif [ "$ORG" == "Lumi" ]
+      then
         if echo $DEPLOY_ENV | grep -q "local"; then export ANSIBLE_JOB=474;
         elif echo $DEPLOY_ENV | grep -q "uat"; then export ANSIBLE_JOB=472;
         elif echo $DEPLOY_ENV | grep -q "sit"; then export ANSIBLE_JOB=472;
