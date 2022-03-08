@@ -1,6 +1,6 @@
 stages: 
   - test
-
+  - deploy
 ############
 include:
   - project: 'ci/common-ci'
@@ -45,3 +45,8 @@ test:
       else
           echo "Fatal errors found in configuration.";
       fi;
+
+deploy:  
+  stage: deploy 
+  script:
+      - echo "Deploying application...";
