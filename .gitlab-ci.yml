@@ -22,12 +22,11 @@ test:
     - echo $ANSIBLE_JOB;
     - echo "Compile and testing haproxy cfg ..."
     - docker login -u $docker_reg_user -p $docker_reg_pass $docker_reg_url
-    - docker build -f dockerfiles/Dockerfile_$DEPLOY_ENV -t haproxy-check-config .
+    - docker build --build-arg ENV="$DEPLOY_ENV" -f dockerfiles/Dockerfile -t haproxy-check-config .
     - if docker run --rm haproxy-check-config haproxy -c -V -f /etc/haproxy/haproxy.cfg; then
           echo "Configuration file is valid...";
       else
           echo "Fatal errors found in configuration.";
       fi;
     - docker run --rm haproxy-check-config haproxy -c -V -f /etc/haproxy/haproxy.cfg
-    - docker image rm -f haproxy-check-config;
-    - if $DEPLOY_ENV=~ local|uat|sit|aws; then echo "auto deploy"; fi
+    - docker image rm -f haproxy-check-config
