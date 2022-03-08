@@ -2,6 +2,9 @@ stages:
   - test
 
 ############
+include:
+  - project: 'ci/common-ci'
+    file: 'haproxy-ci/deploy-vars.gitlab-ci.yml'
 ############
 
 test:
