@@ -8,6 +8,5 @@ test:
   stage: test
   script:
     - export DEPLOY_ENV=$(git diff --name-only HEAD HEAD~1)
-    - echo $DEPLOY_ENV;
-    - ls 
+    #- echo $DEPLOY_ENV;
     - echo $DEPLOY_ENV | cut -d'/' -f2
