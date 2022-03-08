@@ -10,4 +10,4 @@ test:
     - export DEPLOY_ENV=$(git diff --name-only HEAD HEAD~1)
     - echo $DEPLOY_ENV;
     - ls 
-    - echo 'configs/uat1/nexops-tools.cfg' | cut -d'/' -f2
+    - echo '$DEPLOY_ENV' | cut -d'/' -f2
