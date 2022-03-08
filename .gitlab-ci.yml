@@ -28,6 +28,6 @@ deploy:
   stage: deploy 
   script:
       - echo "Deploying application...";
-  rules:
+  #rules:
     #- if: 'echo $DEPLOY_ENV | grep -q "sit"'
-      when: manual
+      #when: manual
