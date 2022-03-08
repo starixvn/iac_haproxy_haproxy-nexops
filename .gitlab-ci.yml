@@ -12,4 +12,6 @@ test:
     - echo $DETECT_ENV_CHANGE | cut -d'/' -f2
     - export DEPLOY_ENV=$(git diff --name-only HEAD HEAD~1 | cut -d'/' -f2)
     - echo $DEPLOY_ENV;
-    - if $DEPLOY_ENV=~ local|uat|sit|aws; then echo "auto deploy"; fi
+    - export 1DEPLOY_ENV=$(DEPLOY_ENV | cut -d'/' -f2)
+    - echo $1DEPLOY_ENV;
+    - if $1DEPLOY_ENV=~ local|uat|sit|aws; then echo "auto deploy"; fi
