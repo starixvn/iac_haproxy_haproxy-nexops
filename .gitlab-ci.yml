@@ -17,13 +17,13 @@ test:
     - export DEPLOY_ENV=$(echo $DETECT_ENV_CHANGE | cut -d'/' -f2)
     - echo $DEPLOY_ENV;
     #- echo $ORG;
-    - if [ $DEPLOY_ENV="local"]; then export ANSIBLE_JOB=480;
-      elif [ $DEPLOY_ENV="uat"]; then export ANSIBLE_JOB=494;
-      elif [ $DEPLOY_ENV="sit"]; then export ANSIBLE_JOB=606;
-      elif [ $DEPLOY_ENV="prod"]; then export ANSIBLE_JOB=528;
-      elif [ $DEPLOY_ENV="prod-nex3"]; then export ANSIBLE_JOB=496;
-      elif [ $DEPLOY_ENV="aws"]; then export ANSIBLE_JOB=693;
-      elif [ $DEPLOY_ENV="aws-nex3"]; then export ANSIBLE_JOB=651;
+    - if [ $DEPLOY_ENV=="local"]; then export ANSIBLE_JOB=480;
+      elif [ $DEPLOY_ENV=="uat"]; then export ANSIBLE_JOB=494;
+      elif [ $DEPLOY_ENV=="sit"]; then export ANSIBLE_JOB=606;
+      elif [ $DEPLOY_ENV=="prod"]; then export ANSIBLE_JOB=528;
+      elif [ $DEPLOY_ENV=="prod-nex3"]; then export ANSIBLE_JOB=496;
+      elif [ $DEPLOY_ENV=="aws"]; then export ANSIBLE_JOB=693;
+      elif [ $DEPLOY_ENV=="aws-nex3"]; then export ANSIBLE_JOB=651;
       fi;
     - echo $ANSIBLE_JOB;
     - echo "Compile and testing haproxy cfg ..."
