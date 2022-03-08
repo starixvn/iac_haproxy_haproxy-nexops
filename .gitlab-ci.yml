@@ -10,12 +10,12 @@ test:
     - export DETECT_ENV_CHANGE=$(git diff --name-only HEAD HEAD~1)
     - echo $DETECT_ENV_CHANGE
     - export DEPLOY_ENV=$(echo $DETECT_ENV_CHANGE | cut -d'/' -f2)
-    - echo $DEPLOY_ENV;echo "$DEPLOY_ENV" | grep -q "local";echo "$DEPLOY_ENV" | grep -q "uat"
+    - echo $DEPLOY_ENV;echo "$DEPLOY_ENV" | grep -q "local";echo "$DEPLOY_ENV" | grep -q "uat";
     - if echo "$DEPLOY_ENV" | grep -q "local"; then
-    export ANSIBLE_JOB=480;
-    elif echo "$DEPLOY_ENV" | grep -q "uat"; then
-    export ANSIBLE_JOB=494;
-    fi
+      export ANSIBLE_JOB=480;
+      elif echo "$DEPLOY_ENV" | grep -q "uat"; then
+      export ANSIBLE_JOB=494;
+      fi;
     - echo $ANSIBLE_JOB;
     - echo "Compile and testing haproxy cfg ..."
     - docker login -u $docker_reg_user -p $docker_reg_pass $docker_reg_url
