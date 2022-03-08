@@ -27,7 +27,7 @@ test:
 deploy:  
   stage: deploy 
   script:
-      - echo "Deploying application...";
-  #rules:
-    #- if: 'echo $DEPLOY_ENV | grep -q "sit"'
-      #when: manual
+      - echo "Deploying application to $DEPLOY_ENV ...";
+  rules:
+    - if: '$DEPLOY_ENV == "sit"'
+      when: manual
