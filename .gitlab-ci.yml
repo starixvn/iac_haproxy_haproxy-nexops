@@ -61,4 +61,6 @@ deploy:
       - sleep 60
       - echo "$ORG - Done Deployment to $DEPLOY_ENV !";
   only:
+    - master
     - main
+    - merge_requests
