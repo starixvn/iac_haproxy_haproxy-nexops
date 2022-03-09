@@ -57,8 +57,11 @@ deploy:
     MANUAL_DEPLOY_ENV: uat
   script:
       - echo "Deploying application to $DEPLOY_ENV ...";
-  rules:
-    - if: '$DEPLOY_ENV == "uat"'
-      when: manual
+  environment:
+    name: $DEPLOY_ENV
+
+  #rules:
     #- if: '$DEPLOY_ENV == "uat"'
-    - when: always
+     # when: manual
+    #- if: '$DEPLOY_ENV == "uat"'
+    #- when: always
