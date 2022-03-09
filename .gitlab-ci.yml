@@ -22,7 +22,6 @@ include:
 test:
   stage: test
   script:
-    - echo $ANSIBLE_JOB;
     - echo "Compile and testing haproxy cfg for $DEPLOY_ENV ..."
     - docker login -u $docker_reg_user -p $docker_reg_pass $docker_reg_url
     - docker build --build-arg ENV="$DEPLOY_ENV" -f dockerfiles/Dockerfile -t haproxy-check-config .
@@ -58,8 +57,10 @@ deploy:
           elif echo $DEPLOY_ENV | grep -q "aws"; then export ANSIBLE_JOB=650;
           fi;
         fi;
+      - echo $ANSIBLE_JOB;
+      - echo "Done Deployment!";
   environment:
-    name: uat
+    name: $DEPLOY_ENV
 
   rules:
     - if: '$MANUAL_DEPLOY_ENV == "uat"'
