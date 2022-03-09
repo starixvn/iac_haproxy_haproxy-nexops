@@ -61,5 +61,5 @@ deploy:
       - sleep 60
       - echo "$ORG - Done Deployment to $DEPLOY_ENV !";
   rules:
-    - if: '$CI_COMMIT_BRANCH == "master"'
+    - if: '$CI_COMMIT_BRANCH == "main"'
       when: always
