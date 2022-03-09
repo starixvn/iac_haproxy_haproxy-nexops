@@ -59,7 +59,7 @@ deploy:
           fi;
         fi;
   environment:
-    name: $DEPLOY_ENV
+    name: uat
 
   rules:
     - if: '$MANUAL_DEPLOY_ENV == "uat"'
