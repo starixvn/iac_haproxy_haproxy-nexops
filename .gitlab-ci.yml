@@ -54,7 +54,7 @@ deploy:
       - echo $ANSIBLE_JOB;
       - echo "Done Deployment!";
   environment:
-    name: $CI_PROJECT_NAME
+    name: $CI_PIPELINE_CREATED_AT
 
 deploy to Prod:  
   stage: deploy-prod
@@ -73,7 +73,7 @@ deploy to Prod:
       - echo $ANSIBLE_JOB;
       - echo "Done Deployment! $DEPLOY_ENV2";
   environment:
-    name: Prod-$CI_PROJECT_NAME
+    name: Prod
 
   rules:
     - when: manual
