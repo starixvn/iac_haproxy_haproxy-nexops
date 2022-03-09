@@ -56,7 +56,7 @@ deploy:
   variables:
     MANUAL_DEPLOY_ENV: $DEPLOY_ENV
   script:
-      - echo "Deploying application to $DEPLOY_ENV ...";
+      - echo "Deploying application to $MANUAL_DEPLOY_ENV ...";
   rules:
     - if: '$MANUAL_DEPLOY_ENV == "sit"'
       when: manual
