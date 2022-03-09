@@ -9,11 +9,11 @@ before_script:
   - echo $DETECT_ENV_CHANGE
   - export DEPLOY_ENV=$(echo $DETECT_ENV_CHANGE | cut -d'/' -f2)
   - echo $DEPLOY_ENV;
-  - if echo $DEPLOY_ENV | grep -q "local"; then export ENV_CREATE=local;
-    elif echo $DEPLOY_ENV | grep -q "uat"; then export ENV_CREATE=uat;
-    elif echo $DEPLOY_ENV | grep -q "sit"; then export ENV_CREATE=sit;
+  - if echo $DEPLOY_ENV | grep -q "local"; then export ENV2=11;
+    elif echo $DEPLOY_ENV | grep -q "uat"; then export ENV2=21;
+    elif echo $DEPLOY_ENV | grep -q "sit"; then export ENV2=31;
     fi;
-  - echo $ORG;
+  - echo "$ORG - $ENV2";
 
 include:
   - project: 'ci/common-ci'
@@ -43,8 +43,8 @@ deploy:
       - if [ "$ORG" == "Nexcel" ];
         then
           if echo $DEPLOY_ENV | grep -q "local"; then export ANSIBLE_JOB=480;
-          elif echo $DEPLOY_ENV | grep -q "uat"; then export ANSIBLE_JOB=494;export DEPLOY_ENV2="uat";
-          elif echo $DEPLOY_ENV | grep -q "sit"; then export ANSIBLE_JOB=606;export DEPLOY_ENV2="sit";
+          elif echo $DEPLOY_ENV | grep -q "uat"; then export ANSIBLE_JOB=494;
+          elif echo $DEPLOY_ENV | grep -q "sit"; then export ANSIBLE_JOB=606;
           elif echo $DEPLOY_ENV | grep -q "aws"; then export ANSIBLE_JOB=693;
           elif echo $DEPLOY_ENV | grep -q "aws-nex3"; then export ANSIBLE_JOB=651;
           fi;
@@ -59,7 +59,7 @@ deploy:
       - echo $ANSIBLE_JOB;
       - echo "Done Deployment! $DEPLOY_ENV2";
   environment:
-    name: $ORG
+    name: $ORG-$ENV2
 
 deploy-prod:  
   stage: deploy-prod
@@ -78,7 +78,7 @@ deploy-prod:
       - echo $ANSIBLE_JOB;
       - echo "Done Deployment! $DEPLOY_ENV2";
   environment:
-    name: prod-$ORG
+    name: prod
 
   rules:
     - when: manual
