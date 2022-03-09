@@ -59,7 +59,7 @@ deploy:
       - echo $ANSIBLE_JOB;
       - echo "Done Deployment! $DEPLOY_ENV2";
   environment:
-    name: $ENV_CREATE
+    name: $ORG
 
 deploy-prod:  
   stage: deploy-prod
@@ -77,9 +77,8 @@ deploy-prod:
         fi;
       - echo $ANSIBLE_JOB;
       - echo "Done Deployment! $DEPLOY_ENV2";
-  #environment:
-  #  name: $ENV_CREATE
-  #  url: $ENV_URL
+  environment:
+    name: prod-$ORG
 
   rules:
     - when: manual
