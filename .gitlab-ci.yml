@@ -54,7 +54,7 @@ deploy:
       - echo $ANSIBLE_JOB;
       - echo "Done Deployment!";
   environment:
-    name: $CI_JOB_STARTED_AT
+    name: Dev
 
 deploy to Prod:  
   stage: deploy-prod
