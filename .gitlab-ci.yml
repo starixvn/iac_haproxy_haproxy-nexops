@@ -31,6 +31,7 @@ test:
   rules:
     - if: '$CI_MERGE_REQUEST_EVENT_TYPE == "detached"' # Avoid spawning of additional pipelines
       when: never
+    - when: always
 
 deploy:  
   stage: deploy
@@ -60,7 +61,8 @@ deploy:
         fi;
       - sleep 60
       - echo "$ORG - Done Deployment to $DEPLOY_ENV !";
+  only:
+    - main
   #rules:
-  #  - if: '$CI_COMMIT_BRANCH != "dev"'
-  #    when: always
-  #  - when: never
+    #- if: '$CI_MERGE_REQUEST_TARGET_BRANCH_NAME == "main"'
+    #- if: '$CI_COMMIT_BRANCH  == "main"'
