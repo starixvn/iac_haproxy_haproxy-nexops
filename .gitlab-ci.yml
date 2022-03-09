@@ -33,11 +33,8 @@ test:
 
 deploy:  
   stage: deploy
-  variables:
-    MANUAL_DEPLOY_ENV: local
   script:
-      - echo "Deploying application to $DEPLOY_ENV ... $MANUAL_DEPLOY_ENV ";
-      - export MANUAL_DEPLOY_ENV="$DEPLOY_ENV"
+      - echo "Deploying application to $DEPLOY_ENV";
       - if [ "$ORG" == "Nexcel" ];
         then
           if echo $DEPLOY_ENV | grep -q "local"; then export ANSIBLE_JOB=480;
@@ -58,11 +55,11 @@ deploy:
           fi;
         fi;
       - echo $ANSIBLE_JOB;
-      - echo "Done Deployment!";
-  environment:
-    name: $DEPLOY_ENV2
+      - echo "Done Deployment! $DEPLOY_ENV2";
+  #environment:
+  #  name: $DEPLOY_ENV2
 
-  rules:
-    - if: '$DEPLOY_ENV2 == "uat"'
-      when: manual
-    - when: always
+  #rules:
+  #  - if: '$DEPLOY_ENV2 == "uat"'
+  #    when: manual
+  #  - when: always
