@@ -59,7 +59,9 @@ deploy:
       - echo $ANSIBLE_JOB;
       - echo "Done Deployment! $DEPLOY_ENV2";
   environment:
-    name: $ORG-$ENV2
+    name: $ENV3
+  variables:
+    ENV3: '$ORG-$ENV2'
 
 deploy-prod:  
   stage: deploy-prod
