@@ -56,8 +56,8 @@ deploy:
         fi;
       - echo $ANSIBLE_JOB;
       - echo "Done Deployment! $DEPLOY_ENV2";
-  #environment:
-  #  name: $DEPLOY_ENV2
+  environment:
+    name: $DEPLOY_ENV2
 
   #rules:
   #  - if: '$DEPLOY_ENV2 == "uat"'
