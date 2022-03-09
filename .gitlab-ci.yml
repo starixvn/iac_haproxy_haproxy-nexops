@@ -9,6 +9,10 @@ before_script:
   - echo $DETECT_ENV_CHANGE
   - export DEPLOY_ENV=$(echo $DETECT_ENV_CHANGE | cut -d'/' -f2)
   - echo $DEPLOY_ENV;
+  - if echo $DEPLOY_ENV | grep -q "local"; then export ANSIBLE_JOB=480;export ENV_URL='https://ha2.nexdev.net';
+    elif echo $DEPLOY_ENV | grep -q "uat"; then export ENV_CREATE=uat;export ENV_URL='https://haproxy.starixuat.com';
+    elif echo $DEPLOY_ENV | grep -q "sit"; then export ENV_CREATE=sit;export ENV_URL='https://haproxy.starixuat.com';
+    fi;
   - echo $ORG;
 
 include:
@@ -54,6 +58,9 @@ deploy:
         fi;
       - echo $ANSIBLE_JOB;
       - echo "Done Deployment! $DEPLOY_ENV2";
+  environment:
+    name: $ENV_CREATE
+    url: $ENV_URL
 
 deploy-prod:  
   stage: deploy-prod
@@ -72,7 +79,8 @@ deploy-prod:
       - echo $ANSIBLE_JOB;
       - echo "Done Deployment! $DEPLOY_ENV2";
   #environment:
-  #  name: 
+  #  name: $ENV_CREATE
+  #  url: $ENV_URL
 
   rules:
     - when: manual
