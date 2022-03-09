@@ -57,6 +57,7 @@ deploy:
         fi;
       - sleep 60
       - echo "$ORG - Done Deployment to $DEPLOY_ENV !";
-
+  rules:
+    - if: '$CI_MERGE_REQUEST_TARGET_BRANCH_NAME == "master"'
   environment:
     name: $ORG
