@@ -53,15 +53,15 @@ test:
 
 deploy:  
   stage: deploy
-  variables:
-    MANUAL_DEPLOY_ENV: uat
+  #variables:
+  #  MANUAL_DEPLOY_ENV: uat
   script:
-      - echo "Deploying application to $DEPLOY_ENV ...";
+      - echo "Deploying application to $DEPLOY_ENV ... $MANUAL_DEPLOY_ENV ";
   environment:
     name: $DEPLOY_ENV
 
-  #rules:
-    #- if: '$DEPLOY_ENV == "uat"'
-     # when: manual
+  rules:
+    - if: '$MANUAL_DEPLOY_ENV == "uat"'
+      when: manual
     #- if: '$DEPLOY_ENV == "uat"'
     #- when: always
