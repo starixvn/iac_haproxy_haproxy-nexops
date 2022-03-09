@@ -8,12 +8,7 @@ before_script:
   - export DETECT_ENV_CHANGE=$(git diff --name-only HEAD HEAD~1)
   - echo $DETECT_ENV_CHANGE
   - export DEPLOY_ENV=$(echo $DETECT_ENV_CHANGE | cut -d'/' -f2)
-  - echo $DEPLOY_ENV;
-  - if echo $DEPLOY_ENV | grep -q "local"; then export ENV2=11;
-    elif echo $DEPLOY_ENV | grep -q "uat"; then export ENV2=21;
-    elif echo $DEPLOY_ENV | grep -q "sit"; then export ENV2=31;
-    fi;
-  - echo "$ORG - $ENV2";
+  - echo "$ORG - $DEPLOY_ENV";
 
 include:
   - project: 'ci/common-ci'
@@ -57,13 +52,11 @@ deploy:
           fi;
         fi;
       - echo $ANSIBLE_JOB;
-      - echo "Done Deployment! $DEPLOY_ENV2";
+      - echo "Done Deployment!";
   environment:
-    name: $ENV3
-  variables:
-    ENV3: $ORG-$ENV2
+    name: $CI_DEFAULT_BRANCH
 
-deploy-prod:  
+deploy to Prod:  
   stage: deploy-prod
   script:
       - echo "Deploying application to $DEPLOY_ENV";
@@ -80,7 +73,7 @@ deploy-prod:
       - echo $ANSIBLE_JOB;
       - echo "Done Deployment! $DEPLOY_ENV2";
   environment:
-    name: prod
+    name: Prod-$CI_DEFAULT_BRANCH
 
   rules:
     - when: manual
