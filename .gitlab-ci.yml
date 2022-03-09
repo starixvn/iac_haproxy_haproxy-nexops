@@ -3,7 +3,6 @@ stages:
   - deploy
 ############
 before_script:
-  #- docker login -u $docker_reg_user -p $docker_reg_pass $docker_reg_url
   - export DETECT_ENV_CHANGE=$(git diff --name-only HEAD HEAD~1)
   - echo $DETECT_ENV_CHANGE
   - export DEPLOY_ENV=$(echo $DETECT_ENV_CHANGE | cut -d'/' -f2)
@@ -54,6 +53,10 @@ deploy:
           fi;
         fi;
       - echo $ANSIBLE_JOB;
-      - echo "Done Deployment!";
+      - if curl --fail -k -s --user $ansible_user:$ansible_pass -X POST "https://ansible.nexdev.net/api/v2/job_templates/$ANSIBLE_JOB/launch/"; then
+          echo "$ORG - Deploying application to $DEPLOY_ENV ...";
+        fi;
+      - sleep 60
+      - echo "$ORG - Done Deployment to $DEPLOY_ENV !";
   environment:
     name: $ORG
