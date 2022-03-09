@@ -60,7 +60,6 @@ deploy:
         fi;
       - sleep 60
       - echo "$ORG - Done Deployment to $DEPLOY_ENV !";
-  only:
-    - master
-    - main
-    - merge_requests
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "master"'
+      when: always
