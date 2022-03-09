@@ -61,7 +61,7 @@ deploy:
   environment:
     name: $ENV3
   variables:
-    ENV3: '$ORG-$ENV2'
+    ENV3: $ORG-$ENV2
 
 deploy-prod:  
   stage: deploy-prod
