@@ -20,3 +20,4 @@ ndict.nexdev.net nexops_ndict_backend
 ndict-api.nexdev.net nexops_ndict_api_backend
 nuget.nexdev.net nexops_nuget_backend
 samplesite1.nexdev.net nexops_samplesite1_backend
+nginx-test.nexdev.net nexops_nginx_test_backend
