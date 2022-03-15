@@ -1,13 +1,13 @@
 #Nexops
-awx.nexdev.net nexops_awx109_nodes
-ansible.nexdev.net nexops_awx_nodes
-deploymentapi.nexdev.net nexops_deploymentapi_nodes
-sonarqube.nexdev.net nexops_sonar_nodes
-sentry.nexdev.net nexops_sentry_nodes
-zabbix.nexdev.net nexops_zabbix_webserver
-grafana.nexdev.net nexops_grafana_nodes
-mon.nexdev.net nexops_grafana_nodes
-portainer.nexdev.net nexops_portainer_nodes
+awx.nexdev.net nexops_awx_web_be
+ansible.nexdev.net nexops_awx_web_be
+deploymentapi.nexdev.net nexops_nexops_deployment_api_be
+sonarqube.nexdev.net nexops_sonar_web_be
+sentry.nexdev.net nexops_nexops_sentry_be
+zabbix.nexdev.net nexops_zb_zabbix-web-nginx-pgsql_be
+grafana.nexdev.net nexops_monitoring_grafana_be
+mon.nexdev.net nexops_monitoring_grafana_be
+portainer.nexdev.net nexops_portainer_portainer_be
 rabbitmq.nexdev.net nexops_rabbitmq_admin_nodes
 bot.nexdev.net nexops_bot_skynex_backend
 bot-api.nexdev.net nexops_bot_skynex_api_backend
@@ -19,5 +19,5 @@ gosql-proxy.nexdev.net nexops_gosql_proxy_backend
 ndict.nexdev.net nexops_ndict_backend
 ndict-api.nexdev.net nexops_ndict_api_backend
 nuget.nexdev.net nexops_nuget_backend
-samplesite1.nexdev.net nexops_samplesite1_backend
-nginx-test.nexdev.net nexops_nginx_test_backend1
+samplesite1.nexdev.net sample_website1_LOCAL
+nginx-test.nexdev.net nexops_nginx_test_be
