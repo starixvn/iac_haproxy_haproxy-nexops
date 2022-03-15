@@ -8,7 +8,7 @@ zabbix.nexdev.net nexops_zb_zabbix-web-nginx-pgsql_be
 grafana.nexdev.net nexops_monitoring_grafana_be
 mon.nexdev.net nexops_monitoring_grafana_be
 portainer.nexdev.net nexops_portainer_portainer_be
-rabbitmq.nexdev.net nexops_rabbitmq_rabbit_be
+rabbitmq.nexdev.net nexops_rabbitmq_rabbit_admin_be
 bot.nexdev.net nexops_bot_skynex_be
 bot-api.nexdev.net nexops_bot_skynex_api_be
 rocketor.nexdev.net nexops_rocketor_be
