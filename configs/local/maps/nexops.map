@@ -19,6 +19,6 @@ gosql-proxy.nexdev.net nexops_gosql_proxy_be
 ndict.nexdev.net nexops_ndict_be
 ndict-api.nexdev.net nexops_ndict_api_be
 nuget.nexdev.net nexops_nuget_be
-website2.nexdev.net sample_website2_LOCAL_be
-website1.nexdev.net sample_website1_LOCAL_be
+website2.nexdev.net nexops_sample_nodejs_website1_LOCAL_be
+website1.nexdev.net nexops_sample_website1_LOCAL_be
 reg.nexdev.net nexops_harbor_be
