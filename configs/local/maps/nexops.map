@@ -22,3 +22,4 @@ nuget.nexdev.net nexops_nuget_be
 website2.nexdev.net nexops_sample_nodejs_website1_LOCAL_be
 website1.nexdev.net nexops_sample_website1_LOCAL_be
 reg.nexdev.net nexops_harbor_be
+reg2.nexdev.net nexops_nexus3_be
