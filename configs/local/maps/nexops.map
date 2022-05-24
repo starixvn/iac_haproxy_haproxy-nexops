@@ -23,3 +23,4 @@ website2.nexdev.net nexops_sample_nodejs_website1_LOCAL_be
 website1.nexdev.net nexops_sample_website1_LOCAL_be
 reg.nexdev.net nexops_harbor_be
 harbor.nexdev.net nexops_harbor_be_local
+nginx.nexdev.net nexops_nginx_testing_be
