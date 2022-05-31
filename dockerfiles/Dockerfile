@@ -6,7 +6,7 @@ RUN chmod -R 600 /root/.ssh/
 RUN ssh-keyscan -t rsa gitlab.nexdev.net >> /root/.ssh/known_hosts
 RUN ls -l /root/.ssh/
 RUN cat /root/.ssh/id_rsa
-RUN cd /srv/ && git clone git@gitlab.nexdev.net:NEXOPS/haproxy/haproxy-default.git
+RUN cd /srv/ && git reset --hard && git clean -df && git clone git@gitlab.nexdev.net:NEXOPS/haproxy/haproxy-default.git
 RUN ls -l /srv/
 #############
 COPY configs/$ENV /usr/local/etc/haproxy/configs/$ENV
