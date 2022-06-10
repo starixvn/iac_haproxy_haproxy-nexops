@@ -1,24 +1,4 @@
 #Nexops
-awx.nexdev.net nexops_awx_web_be
 ansible.nexdev.net nexops_awx_web_be
 deploymentapi.nexdev.net nexops_nexops_deployment_api_be
-deploymentapi2.nexdev.net nexops_nexops_deployment_api2_be
-sonarqube.nexdev.net nexops_sonar_web_be
-sentry.nexdev.net nexops_nexops_sentry_be
-zabbix.nexdev.net nexops_zb_zabbix-web-nginx-pgsql_be
-grafana.nexdev.net nexops_monitoring_grafana_be
-mon.nexdev.net nexops_monitoring_grafana_be
-portainer.nexdev.net nexops_portainer_portainer_be
-rabbitmq.nexdev.net nexops_rabbitmq_rabbit_admin_be
-bot.nexdev.net nexops_bot_skynex_be
-bot-api.nexdev.net nexops_bot_skynex_api_be
-rocketor.nexdev.net nexops_rocketor_be
-rocketor-api.nexdev.net nexops_rocketor_api_be
-rocketor-proxy.nexdev.net nexops_rocketor_proxy_be
-gosql-api.nexdev.net nexops_gosql_api_be
-gosql-proxy.nexdev.net nexops_gosql_proxy_be
-ndict.nexdev.net nexops_ndict_be
-ndict-api.nexdev.net nexops_ndict_api_be
-nuget.nexdev.net nexops_nuget_be
-harbor2.nexdev.net nexops_harbor2_be_local
-harbor.nexdev.net nexops_harbor_be_local
+deployapi.nexdev.net nexops_nexops_deployment_api_be
