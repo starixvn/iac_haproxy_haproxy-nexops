@@ -5,3 +5,4 @@ deployapi.nexdev.net nexops_nexops_deployment_api_be
 portainer.nexdev.net nexops_portainer_portainer_be
 hub2.nexdev.net nexops_harbor2_be_local
 hub.nexdev.net nexops_harbor_be_local
+hap.nexdev.net empty_backend_nodes
