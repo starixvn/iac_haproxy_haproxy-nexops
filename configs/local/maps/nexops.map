@@ -21,8 +21,6 @@ ndict-api.nexdev.net nexops_ndict_api_be
 nuget.nexdev.net nexops_nuget_be
 website2.nexdev.net nexops_sample_nodejs_website1_LOCAL_be
 website1.nexdev.net nexops_sample_website1_LOCAL_be
-reg.nexdev.net nexops_harbor_be
-harbor2.nexdev.net nexops_harbor2_be_local
-harbor.nexdev.net nexops_harbor_be_local
+hub2.nexdev.net nexops_harbor2_be_local
 hub.nexdev.net nexops_harbor_be_local
 nginx-test.nexdev.net nexops_nginx_testing_be
