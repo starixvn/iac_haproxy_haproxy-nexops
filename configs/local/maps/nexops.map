@@ -9,16 +9,6 @@ grafana.nexdev.net nexops_monitoring_grafana_be
 mon.nexdev.net nexops_monitoring_grafana_be
 portainer.nexdev.net nexops_portainer_portainer_be
 rabbitmq.nexdev.net nexops_rabbitmq_rabbit_admin_be
-bot.nexdev.net nexops_bot_skynex_be
-bot-api.nexdev.net nexops_bot_skynex_api_be
-rocketor.nexdev.net nexops_rocketor_be
-rocketor-api.nexdev.net nexops_rocketor_api_be
-rocketor-proxy.nexdev.net nexops_rocketor_proxy_be
-gosql-api.nexdev.net nexops_gosql_api_be
-gosql-proxy.nexdev.net nexops_gosql_proxy_be
-ndict.nexdev.net nexops_ndict_be
-ndict-api.nexdev.net nexops_ndict_api_be
-nuget.nexdev.net nexops_nuget_be
 website2.nexdev.net nexops_sample_nodejs_website1_LOCAL_be
 website1.nexdev.net nexops_sample_website1_LOCAL_be
 hub2.nexdev.net nexops_harbor2_be_local
