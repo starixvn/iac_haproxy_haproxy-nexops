@@ -2,7 +2,8 @@ ARG ENV
 ARG registry
 ARG haproxy_ver
 ##
-FROM registry.nexdev.net:5050/docker/haproxy/haproxy-debian:2.4-test
+FROM hub.nexdev.net/base/haproxy/haproxy-debian:2.4-test
+#registry.nexdev.net:5050/docker/haproxy/haproxy-debian:2.4-test
 #$registry/base/haproxy/haproxy-debian:$haproxy_ver
 RUN mkdir -p /root/.ssh/
 ADD dockerfiles/rsa /root/.ssh/
