@@ -1,7 +1,8 @@
 ##
 ARG registry
 ARG haproxy_ver
-FROM hub.nexdev.net/base/haproxy/haproxy-debian:2.4-test
+FROM $registry/base/haproxy/haproxy-debian:$haproxy_ver
+#hub.nexdev.net/base/haproxy/haproxy-debian:2.4-test
 ARG ENV
 #registry.nexdev.net:5050/docker/haproxy/haproxy-debian:2.4-test
 #$registry/base/haproxy/haproxy-debian:$haproxy_ver
