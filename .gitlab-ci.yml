@@ -1,4 +1,4 @@
 include:
   - project: "ci/common-ci"
-    ref: haproxy-env #master
+    ref: master
     file: "haproxy-ci/haproxy.gitlab-ci.yml"
