@@ -1,4 +1,5 @@
 #Nexops
+minio.nexdev.net nexops_minio_nodes
 awx.nexdev.net nexops_awx_web_be
 ansible.nexdev.net nexops_awx_web_be
 deploymentapi.nexdev.net nexops_nexops_deployment_api_be
