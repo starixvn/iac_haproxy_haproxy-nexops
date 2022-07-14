@@ -1,13 +1,13 @@
 include:
   - project: "ci/common-ci"
-    ref: master
+    ref: haproxy
     file: "haproxy-ci/haproxy.gitlab-ci.yml"
-  - project: "ci/common-ci"
-    ref: master
-    file: "haproxy-ci/haproxy.nexprod.gitlab-ci.yml"
-  - project: "ci/common-ci"
-    ref: master
-    file: "haproxy-ci/haproxy.nex3.gitlab-ci.yml"
-  - project: "ci/common-ci"
-    ref: master
-    file: "haproxy-ci/haproxy.test.gitlab-ci.yml"
+  #- project: "ci/common-ci"
+  #  ref: master
+  #  file: "haproxy-ci/haproxy.nexprod.gitlab-ci.yml"
+  #- project: "ci/common-ci"
+  #  ref: master
+  #  file: "haproxy-ci/haproxy.nex3.gitlab-ci.yml"
+  #- project: "ci/common-ci"
+  #  ref: master
+  #  file: "haproxy-ci/haproxy.test.gitlab-ci.yml"
