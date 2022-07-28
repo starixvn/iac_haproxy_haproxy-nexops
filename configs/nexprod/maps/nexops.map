@@ -2,7 +2,6 @@
 ansible.nexdev.net nexops_awx_web_be
 deploymentapi.nexdev.net nexops_nexops_deployment_api_be
 deployapi.nexdev.net nexops_nexops_deployment_api_be
-deploymentapi-test.nexdev.net nexops_nexops_deployment_api_test_be
 portainer.nexdev.net nexops_portainer_portainer_be
 hub2.nexdev.net nexops_harbor2_be_local
 hub.nexdev.net nexops_harbor_be_local
