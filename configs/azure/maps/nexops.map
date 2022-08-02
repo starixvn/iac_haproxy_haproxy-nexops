@@ -1,0 +1,17 @@
+#####Nexops
+ansible.nexdev.net nexops_awx_web_be
+deploymentapi.nexdev.net nexops_nexops_deployment_api_be
+deployapi.nexdev.net nexops_nexops_deployment_api_be
+portainer.nexdev.net nexops_portainer_portainer_be
+hub2.nexdev.net nexops_harbor2_be_local
+hub.nexdev.net nexops_harbor_be_local
+hap.nexdev.net empty_backend_nodes
+hap2.nexdev.net empty_backend_nodes
+bot.nexdev.net nexops_bot_skynex_be
+rocketor.nexdev.net nexops_rocketor_be
+rocketor-api.nexdev.net nexops_rocketor_api_be
+rocketor-proxy.nexdev.net nexops_rocketor_proxy_be
+gosql-api.nexdev.net nexops_gosql_api_be
+gosql-proxy.nexdev.net nexops_gosql_proxy_be
+ndict.nexdev.net nexops_ndict_be
+ndict-api.nexdev.net nexops_ndict_api_be
