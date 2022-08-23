@@ -1,5 +1,5 @@
 #####Nexops
-rm-c.nexdev.net empty_backend_nodes
-hap-c.nexdev.net empty_backend_nodes
-deployment-c.nexdev.net nexops_deployment_api_be
-portainer-c.nexdev.net nexops_portainer_portainer_be
+deployment.starixnet.com nexops_deployment_api_be
+hap.starixnet.com empty_backend_nodes
+www.starixnet.com empty_backend_nodes
+starixnet.com empty_backend_nodes
