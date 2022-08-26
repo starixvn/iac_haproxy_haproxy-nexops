@@ -1,5 +1,5 @@
 #####Nexops
 deployment.starixnet.com nexops_deployment_api_be
-hap.starixnet.com empty_backend_nodes
+hap.starixnet.com um_backend_nodes
 www.starixnet.com empty_backend_nodes
 starixnet.com empty_backend_nodes
