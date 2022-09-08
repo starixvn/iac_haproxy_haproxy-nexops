@@ -1,4 +1,5 @@
 #####Nexops
 deployment.starixnet.com nexops_deployment_api_be
 deployment.sabavn.com nexops_deployment_api_be
+deployment-c.nexdev.net nexops_deployment_api_be
 hap.starixnet.com um_backend_nodes
