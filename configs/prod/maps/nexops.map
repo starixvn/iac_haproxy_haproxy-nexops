@@ -2,5 +2,3 @@
 haproxy.oneops.net empty_backend_nodes
 alphalog.starixplay.com alpha_log_be
 #sentry.starixplay.com nexops_sentry_web_prod_be
-nexhub.starixplay.com nexops_harbor_be_prod
-harbor.starixplay.com nexops_harbor_be_prod
