@@ -1,2 +1,2 @@
-^/website1(/.*)?$ nexops_path_sample_website1_LOCAL_be
-^/website/local3(/.*)?$ nexops_sample_website1_LOCAL_3_path_be
+/website1/ nexops_path_sample_website1_LOCAL_be
+/website/local3/ nexops_sample_website1_LOCAL_3_path_be
