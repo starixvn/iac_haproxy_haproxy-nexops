@@ -1,3 +1,3 @@
 ^/local4(/.*)?$ nexops_sample_website1_LOCAL_4_path_be
 ^/local(/.*)?$ nexops_path_sample_website1_LOCAL_be
-^/website/local3(/.*)?$ nexops_sample_website1_LOCAL_3_path_be
+^/local3(/.*)?$ nexops_sample_website1_LOCAL_3_path_be
