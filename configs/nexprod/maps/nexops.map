@@ -1,5 +1,6 @@
 #####Nexops
 ansible.nexdev.net nexops_awx_web_be
+ansible2.nexdev.net nexops_awx_web_NEXPROD_be
 deploymentapi.nexdev.net nexops_nexops_deployment_api_be
 deployapi.nexdev.net nexops_nexops_deployment_api_be
 portainer.nexdev.net nexops_portainer_portainer_be
