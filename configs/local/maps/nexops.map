@@ -18,4 +18,4 @@ website2.nexdev.net nexops_sample_nodejs_website1_LOCAL_be
 hub2.nexdev.net nexops_harbor2_be_local
 hub.nexdev.net nexops_harbor_be_local
 nginx-test.nexdev.net nexops_nginx_testing_be
-baget.nexdev.net nexops_baget_be
+baget-test.nexdev.net nexops_baget_be
