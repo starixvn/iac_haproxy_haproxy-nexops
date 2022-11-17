@@ -4,6 +4,9 @@ include:
     file: "haproxy-ci/haproxy.gitlab-ci.yml"
   - project: "ci/common-ci"
     ref: master
+    file: "haproxy-ci/haproxy.sit.gitlab-ci.yml"
+  - project: "ci/common-ci"
+    ref: master
     file: "haproxy-ci/haproxy.nexprod.gitlab-ci.yml"
   - project: "ci/common-ci"
     ref: master
