@@ -1,3 +1,2 @@
-^/main(/.*)?$ nexops_sample_website1_LOCAL_be
 ^/static(/.*)?$ nexops_sample_static_LOCAL_be
 ^/api(/.*)?$ nexops_sample_api_LOCAL_be
