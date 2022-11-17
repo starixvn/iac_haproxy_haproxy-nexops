@@ -16,4 +16,3 @@ rabbitmq.nexdev.net nexops_rabbitmq_rabbit_admin_be
 hub2.nexdev.net nexops_harbor2_be_local
 hub.nexdev.net nexops_harbor_be_local
 baget-test.nexdev.net nexops_baget_be
-website-demo1.nexdev.net nexops_sample_website1_LOCAL_be
