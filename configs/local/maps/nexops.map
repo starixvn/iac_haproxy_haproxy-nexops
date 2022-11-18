@@ -1,4 +1,5 @@
 #Nexops
+website-demo1.nexdev.net nexops_sample_website1_LOCAL_be
 minio.nexdev.net nexops_minio_nodes
 minio-api.nexdev.net nexops_minio_api_nodes
 awx.nexdev.net nexops_awx_web_be
