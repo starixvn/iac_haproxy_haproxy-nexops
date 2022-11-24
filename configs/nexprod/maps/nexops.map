@@ -16,3 +16,4 @@ gosql-api.nexdev.net nexops_gosql_api_be
 gosql-proxy.nexdev.net nexops_gosql_proxy_be
 ndict.nexdev.net nexops_ndict_be
 ndict-api.nexdev.net nexops_ndict_api_be
+zabbix.nexdev.net nexops_zb_zabbix-web-nginx-pgsql_be

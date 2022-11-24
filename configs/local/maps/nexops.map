@@ -17,4 +17,3 @@ portainer.nexdev.net nexops_portainer_portainer_be
 rabbitmq.nexdev.net nexops_rabbitmq_rabbit_admin_be
 hub2.nexdev.net nexops_harbor2_be_local
 hub.nexdev.net nexops_harbor_be_local
-baget-test.nexdev.net nexops_baget_be
