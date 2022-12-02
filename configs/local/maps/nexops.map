@@ -1,5 +1,6 @@
 sample.nexdev.net nexops_sample_website2_LOCAL_be
 #Nexops
+k8s-testing.nexdev.net nexops_testing_k8s
 website-demo1.nexdev.net nexops_sample_website1_LOCAL_be
 minio.nexdev.net nexops_minio_nodes
 minio-api.nexdev.net nexops_minio_api_nodes
