@@ -12,8 +12,6 @@ sonarqube.nexdev.net nexops_sonar_web_be
 sentry.nexdev.net nexops_nexops_sentry_be
 zabbix.nexdev.net nexops_zb_zabbix-web-nginx-pgsql_be
 logs.nexdev.net nexops_elk_kibana_be
-grafana.nexdev.net nexops_monitoring_grafana2_be
-mon.nexdev.net nexops_monitoring_grafana_be
 portainer.nexdev.net nexops_portainer_portainer_be
 rabbitmq.nexdev.net nexops_rabbitmq_rabbit_admin_be
 hub2.nexdev.net nexops_harbor2_be_local
