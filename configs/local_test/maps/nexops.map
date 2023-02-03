@@ -7,4 +7,5 @@ nginx.haproxydev.local ngin_nodes
 prometheus.haproxydev.local monitoring_prometheus_nodes
 api-proxy.haproxydev.local be_www2
 rocketor2.nexdev.net nexops_rocketor_backend
+portainer.haproxydev.local nexops_portainer_nodes
 #haproxydev.local be_www
