@@ -1,3 +1,5 @@
 #NexOps
 stdeployment.sportsfun.app default_backend_nodes
 sthaproxy.sportsfun.app default_backend_nodes
+deploy-l.sportsfun.app nexops_deployment_api_be
+deploy-w.sportsfun.app nexops_wsdeployment_api_be
