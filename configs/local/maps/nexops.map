@@ -1,3 +1,5 @@
+ndict-api-test.nexdev.net nexops_nexops_ndict_api_LOCAL_be
+ndict-test.nexdev.net nexops_nexops_ndict_site_LOCAL_be
 sample.nexdev.net nexops_sample_website2_LOCAL_be
 #Nexops
 k8s-testing.nexdev.net nexops_testing_k8s
@@ -16,3 +18,4 @@ rabbitmq.nexdev.net nexops_rabbitmq_rabbit_admin_be
 hub2.nexdev.net nexops_harbor2_be_local
 hub.nexdev.net nexops_harbor_be_local
 dot-trace.nexdev.net nexops_dot_trace_LOCAL_be
+npm.nexdev.net nexops_verdaccio_npm_be
