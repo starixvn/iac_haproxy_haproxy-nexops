@@ -1,3 +1,4 @@
+ndict.nexdev.net nexops_nexops_ndict_site_NEXPROD_be
 ndict-api.nexdev.net nexops_nexops_ndict_api_NEXPROD_be
 #####Nexops
 ansible.nexdev.net nexops_awx_web_new_be
@@ -14,7 +15,6 @@ rocketor-api.nexdev.net nexops_rocketor_api_be
 rocketor-proxy.nexdev.net nexops_rocketor_proxy_be
 gosql-api.nexdev.net nexops_gosql_api_be
 gosql-proxy.nexdev.net nexops_gosql_proxy_be
-ndict.nexdev.net nexops_ndict_be
 zabbix.nexdev.net nexops_zb_zabbix-web-nginx-pgsql_be
 jenkins.nexdev.net nexops_jenkins_be
 grafana.nexdev.net nexops_monitoring_grafana_be
