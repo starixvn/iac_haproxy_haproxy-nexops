@@ -8,4 +8,5 @@ prometheus.haproxydev.local monitoring_prometheus_nodes
 api-proxy.haproxydev.local be_www2
 rocketor2.nexdev.net nexops_rocketor_backend
 portainer.haproxydev.local nexops_portainer_nodes
+trivy.haproxydev.local  trivy_stack_be
 #haproxydev.local be_www
