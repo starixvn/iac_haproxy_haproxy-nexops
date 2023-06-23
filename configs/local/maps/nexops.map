@@ -11,6 +11,7 @@ awx.nexdev.net nexops_awx_web_be
 deploymentapi.nexdev.net nexops_nexops_deployment_api_be
 deploymentapi-test.nexdev.net nexops_nexops_deployment_api_test_be
 sonarqube.nexdev.net nexops_sonar_web_be
+sonarqube-dev.nexdev.net nexops_sonar_dev_web_be
 sentry.nexdev.net nexops_nexops_sentry_be
 zabbix.nexdev.net nexops_zb_zabbix-web-nginx-pgsql_be
 logs.nexdev.net nexops_elk_kibana_be
