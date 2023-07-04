@@ -19,5 +19,6 @@ portainer-agent-dev.nexdev.net nexops_portainer_portainer_be
 rabbitmq.nexdev.net nexops_rabbitmq_rabbit_admin_be
 hub2.nexdev.net nexops_harbor2_be_local
 hub.nexdev.net nexops_harbor_be_local
+hub-testing.nexdev.net nexops_harbor_testing_be_local
 dot-trace.nexdev.net nexops_dot_trace_LOCAL_be
 npm.nexdev.net nexops_verdaccio_npm_be
