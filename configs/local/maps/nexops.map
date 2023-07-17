@@ -1,7 +1,7 @@
 gosql-proxy-test.nexdev.net nexops_nexops_gosql_proxy_LOCAL_be
 gosql-webapi-test.nexdev.net nexops_nexops_gosql_webapi_LOCAL_be
 login-gosql-test.nexdev.net nexops_nexops_gosql_login_LOCAL_be
-sample-website1.nexdev.net nexops_sample_website1_LOCAL_be
+sample.nexdev.net nexops_sample_website1_LOCAL_be
 ndict-test1.nexdev.net nexops_nexops_ndict_site_LOCAL_1_be
 ndict-api-test.nexdev.net nexops_nexops_ndict_api_LOCAL_be
 ndict-test.nexdev.net nexops_nexops_ndict_site_LOCAL_be
