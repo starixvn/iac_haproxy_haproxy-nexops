@@ -13,7 +13,7 @@ include:
     file: "haproxy-ci/haproxy.alphaprod.gitlab-ci.yml"
   - project: "ci/common-ci"
     ref: kldr
-    file: "haproxy-ci/haproxy.alphkldr.gitlab-ci.yml"
+    file: "haproxy-ci/haproxy.alphakldr.gitlab-ci.yml"
   - project: "ci/common-ci"
     ref: kldr
     file: "haproxy-ci/haproxy.fpsprod.gitlab-ci.yml"
