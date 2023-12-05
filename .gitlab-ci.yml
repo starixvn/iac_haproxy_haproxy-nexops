@@ -13,6 +13,9 @@ include:
     file: "haproxy-ci/haproxy.alphaprod.gitlab-ci.yml"
   - project: "ci/common-ci"
     ref: master
+    file: "haproxy-ci/haproxy.alphkldr.gitlab-ci.yml"
+  - project: "ci/common-ci"
+    ref: master
     file: "haproxy-ci/haproxy.fpsprod.gitlab-ci.yml"
   - project: "ci/common-ci"
     ref: master
