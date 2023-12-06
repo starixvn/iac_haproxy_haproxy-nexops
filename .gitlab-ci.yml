@@ -1,28 +1,31 @@
 include:
   - project: "ci/common-ci"
-    ref: master
+    ref: main
     file: "haproxy-ci/haproxy.gitlab-ci.yml"
   - project: "ci/common-ci"
-    ref: master
+    ref: main
     file: "haproxy-ci/haproxy.sit.gitlab-ci.yml"
   - project: "ci/common-ci"
-    ref: master
+    ref: main
     file: "haproxy-ci/haproxy.nexprod.gitlab-ci.yml"
   - project: "ci/common-ci"
-    ref: master
-    file: "haproxy-ci/haproxy.nex3.gitlab-ci.yml"
-  - project: "ci/common-ci"
-    ref: master
+    ref: main
     file: "haproxy-ci/haproxy.alphaprod.gitlab-ci.yml"
   - project: "ci/common-ci"
-    ref: master
+    ref: main
+    file: "haproxy-ci/haproxy.alphakldr.gitlab-ci.yml"
+  - project: "ci/common-ci"
+    ref: main
     file: "haproxy-ci/haproxy.fpsprod.gitlab-ci.yml"
   - project: "ci/common-ci"
-    ref: master
+    ref: main
     file: "haproxy-ci/haproxy.gc.gitlab-ci.yml"
   - project: "ci/common-ci"
-    ref: master
+    ref: main
     file: "haproxy-ci/haproxy.nexaws.gitlab-ci.yml"
   - project: "ci/common-ci"
-    ref: master
+    ref: main
     file: "haproxy-ci/haproxy.test.gitlab-ci.yml"
+  - project: "ci/common-ci"
+    ref: main
+    file: "haproxy-ci/haproxy.kldr.gitlab-ci.yml"
