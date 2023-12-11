@@ -21,6 +21,6 @@ RUN cp /srv/haproxy-default/certs/nexdev.net.pem /etc/haproxy/nexdev.net.pem
 RUN cp /srv/haproxy-default/certs/nexcel.vn.pem /etc/haproxy/nexcel.vn.pem
 RUN mkdir /usr/local/etc/haproxy/maps
 RUN cat /usr/local/etc/haproxy/configs/$ENV/maps/*.map > /usr/local/etc/haproxy/maps/hosts.map
-RUN if [ -e /usr/local/etc/haproxy/configs/$ENV/special-maps ] ; then cp /usr/local/etc/haproxy/configs/$ENV/special-maps/* /usr/local/etc/haproxy/maps/ ; fi ;
+#RUN if [ -e /usr/local/etc/haproxy/configs/$ENV/special-maps ] ; then cp /usr/local/etc/haproxy/configs/$ENV/special-maps/* /usr/local/etc/haproxy/maps/ ; fi ;
 RUN cat /usr/local/etc/haproxy/haproxy.cfg
 RUN cat /etc/haproxy/maps/hosts.map
