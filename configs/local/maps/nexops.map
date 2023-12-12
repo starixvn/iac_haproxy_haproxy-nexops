@@ -28,3 +28,6 @@ hub-testing.nexdev.net nexops_harbor_testing_be_local
 dot-trace.nexdev.net nexops_dot_trace_LOCAL_be
 npm.nexdev.net nexops_verdaccio_npm_be
 npm.lumigame.com verdacio_npm_lumi_nodes
+###
+portaineragent-starix-local.nexdev.net nexops_portainer_agent_local_be
+prometheus-starix-local.nexdev.net nexops_prometheus_local_be
