@@ -1,0 +1,7 @@
+skynexapi.starixplay.com nexops_nexops_skynex_data_api_PROD_be
+#NexOps
+vn-nap-haproxy.byb6181.com empty_backend_nodes
+vn-deployapi-ws.byb6181.com nexops_ws_deployment_api_be
+vn-deployapi-sql.byb6181.com nexops_sql_deployment_api_be
+vn-deployapi-li.byb6181.com nexops_li_deployment_api_be
+vn-ansible.byb6181.com nexops_ansible_be
