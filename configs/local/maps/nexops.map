@@ -5,7 +5,7 @@ gosql-proxy-test.nexdev.net nexops_nexops_gosql_proxy_LOCAL_be
 gosql-webapi-test.nexdev.net nexops_nexops_gosql_webapi_LOCAL_be
 ndict-test1.nexdev.net nexops_nexops_ndict_site_LOCAL_1_be
 ndict-api-test.nexdev.net nexops_nexops_ndict_api_LOCAL_be
-test-rocketor-ndict.nexdev.net nexops_nexops_ndict_site_LOCAL_be
+ndict-test.nexdev.net nexops_nexops_ndict_site_LOCAL_be
 #Nexops
 k8s-testing.nexdev.net nexops_testing_k8s
 minio.nexdev.net nexops_minio_nodes
@@ -31,3 +31,6 @@ npm.lumigame.com verdacio_npm_lumi_nodes
 ###
 portaineragent-starix-local.nexdev.net nexops_portainer_agent_local_be
 prometheus-starix-local.nexdev.net nexops_prometheus_local_be
+gitlab-dev.nexdev.net nexops_gitlab_dev_be
+gitlab-bk.nexdev.net nexops_gitlab_bk_be
+git3-bk.nexdev.net nexops_git3_bk_be
