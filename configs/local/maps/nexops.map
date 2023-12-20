@@ -31,3 +31,4 @@ npm.lumigame.com verdacio_npm_lumi_nodes
 ###
 portaineragent-starix-local.nexdev.net nexops_portainer_agent_local_be
 prometheus-starix-local.nexdev.net nexops_prometheus_local_be
+gitlab-dev.nexdev.net nexops_gitlab_dev_be
