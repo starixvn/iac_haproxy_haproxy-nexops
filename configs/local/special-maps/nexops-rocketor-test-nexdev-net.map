@@ -1,2 +1,2 @@
-^/abc(/.*)?$ nexops_nexops_gosql_site_LOCAL_path_be
+^/gosql(/.*)?$ nexops_nexops_gosql_site_LOCAL_path_be
 #^/ nexops_nexops_rocketor_LOCAL_be
