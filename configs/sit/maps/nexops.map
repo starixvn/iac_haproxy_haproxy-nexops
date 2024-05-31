@@ -1,3 +1,4 @@
 ###NexOps
 haproxy.playthefun.com default_backend_nodes
 sentry.playthefun.com nexops_sentry_web_sit_be
+elk_kibana.playonesit.com nexops_elk_kibana_sit_be
