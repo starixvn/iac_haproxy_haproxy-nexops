@@ -10,7 +10,6 @@ hub2.nexdev.net nexops_harbor2_be_local
 hub.nexdev.net nexops_harbor_be_local
 hap.nexdev.net empty_backend_nodes
 hap2.nexdev.net empty_backend_nodes
-rocketor.nexdev.net nexops_rocketor_be
 rocketor-api.nexdev.net nexops_rocketor_api_be
 rocketor-proxy.nexdev.net nexops_rocketor_proxy_be
 gosql-api.nexdev.net nexops_gosql_api_be
