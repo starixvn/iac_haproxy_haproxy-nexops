@@ -3,3 +3,4 @@ vault.nebula.sit vault_ui_be
 vault.playonesit.com vault_ui_be
 haproxy.playthefun.com default_backend_nodes
 sentry.playthefun.com nexops_sentry_web_sit_be
+prometheus.playonesit.com prometheus_be
