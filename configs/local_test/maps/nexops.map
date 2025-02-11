@@ -1,7 +1,6 @@
 #s2domainname           backendname
 #static.haproxydev.local be_static
 #www.haproxydev.local be_www
-#minio.haproxydev.local nexops_minio_nodes
 #api.haproxydev.local be_api
 #nginx.haproxydev.local ngin_nodes
 #prometheus.haproxydev.local monitoring_prometheus_nodes
