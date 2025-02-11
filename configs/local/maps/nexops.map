@@ -9,8 +9,6 @@ ndict-test.nexdev.net nexops_nexops_ndict_site_LOCAL_be
 hap.nexdev.net empty_backend_nodes
 dennis-testing.nexdev.net dennis_testing_be_local
 k8s-testing.nexdev.net nexops_testing_k8s
-minio.nexdev.net nexops_minio_nodes
-minio-api.nexdev.net nexops_minio_api_nodes
 awx.nexdev.net nexops_awx_web_be
 #ansible.nexdev.net nexops_awx_web_be
 #ansible-new.nexdev.net nexops_awx_stack_be
