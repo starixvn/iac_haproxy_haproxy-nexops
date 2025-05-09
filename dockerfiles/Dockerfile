@@ -1,4 +1,5 @@
-FROM hub.nexdev.net/base/haproxy/haproxy-ubuntu:2.6-ci
+# FROM hub.nexdev.net/base/haproxy/haproxy-ubuntu:2.6-ci
+FROM hub.nexdev.net/base/haproxy/haproxy-ubuntu:3.1-ci
 ARG ENV
 RUN mkdir -p /root/.ssh/
 ADD dockerfiles/rsa /root/.ssh/
