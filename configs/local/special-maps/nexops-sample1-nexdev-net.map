@@ -1,6 +1,6 @@
-^/local(/.*)?$ nexops_sample_website1_LOCAL_path_be
+^/be(/.*)?$ nexops_sample_website1_LOCAL_path_be
 ^/local-test(/.*)?$ nexops_sample_website1_LOCAL_2_path_be
 
 
 
-^/ nexops_sample_website2_LOCAL_path_be
+^/ nexops_sample_website1_LOCAL_1_path_be
