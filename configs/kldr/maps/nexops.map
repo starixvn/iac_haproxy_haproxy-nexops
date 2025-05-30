@@ -10,4 +10,7 @@ deployapi-napklprod.byb6181.com nexops_li_deployment_api_be
 vn-ansible.byb6181.com nexops_ansible_be
 vn-grafana.byb6181.com  nexops_grafana_be
 prometheus.byb6181.com prometheus_nap_be
-##
+
+#############################
+#### FPS PROD CONF 
+deployapi-fpsklprod.byb6181.com nexops_li_deployment_api_be
