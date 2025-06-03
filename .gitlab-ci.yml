@@ -18,10 +18,10 @@ include:
     ref: master
     file: "haproxy-ci/haproxy.alphakldr.gitlab-ci.yml"
   - project: "ci/common-ci"
-    ref: klprod
+    ref: master
     file: "haproxy-ci/haproxy.fpsprod.gitlab-ci.yml"
   - project: "ci/common-ci"
-    ref: master
+    ref: klprod
     file: "haproxy-ci/haproxy.fpsklprod.gitlab-ci.yml"
   - project: "ci/common-ci"
     ref: master
