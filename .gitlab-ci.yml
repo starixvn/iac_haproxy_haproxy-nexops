@@ -1,6 +1,6 @@
 include:
   - project: "ci/common-ci"
-    ref: klprod
+    ref: master
     file: "haproxy-ci/haproxy.gitlab-ci.yml"
   - project: "ci/common-ci"
     ref: master
@@ -12,7 +12,7 @@ include:
     ref: master
     file: "haproxy-ci/haproxy.alphaprod.gitlab-ci.yml"
   - project: "ci/common-ci"
-    ref: klprod
+    ref: master
     file: "haproxy-ci/haproxy.alphaklprod.gitlab-ci.yml"
   - project: "ci/common-ci"
     ref: master
@@ -21,7 +21,7 @@ include:
     ref: master
     file: "haproxy-ci/haproxy.fpsprod.gitlab-ci.yml"
   - project: "ci/common-ci"
-    ref: klprod
+    ref: master
     file: "haproxy-ci/haproxy.fpsklprod.gitlab-ci.yml"
   - project: "ci/common-ci"
     ref: master
@@ -36,5 +36,5 @@ include:
     ref: master
     file: "haproxy-ci/haproxy.kldr.gitlab-ci.yml"
   - project: "ci/common-ci"
-    ref: klprod
+    ref: master
     file: "haproxy-ci/haproxy.klprod.gitlab-ci.yml"
