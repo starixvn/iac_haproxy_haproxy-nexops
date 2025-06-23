@@ -1,3 +1,4 @@
 website1-klprod.byb6181.com nexops_sample_website1_KLPROD_be
 haproxy-napklprod.byb6181.com empty_backend_nodes
 deployapi-napklprod.byb6181.com nexops_li_deployment_api_be
+rocketor-proxy-klp.starixplay.com nexpe_rocketor_proxy_KLPROD_be
