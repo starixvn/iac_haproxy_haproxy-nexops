@@ -1,4 +1,4 @@
-website1-klprod.byb6181.com nexops_sample_website1_KLPROD_be
+website1.stag-kl.oneops.net nexops_sample_website1_KLPROD_be
 haproxy-napklprod.byb6181.com empty_backend_nodes
 deployapi-napklprod.byb6181.com nexops_li_deployment_api_be
 deployapi-nap-klp.starixplay.com nexops_li_deployment_api_be
