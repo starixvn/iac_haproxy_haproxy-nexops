@@ -1,3 +1,4 @@
+promx.nexdev.net    nexops_proxmox_testlab_be
 sample.nexdev.net nexops_sample_website1_LOCAL_be
 sample1-clone1.nexdev.net nexops_sample_website1_cloned1_LOCAL_3_be
 sample1-clone1.nexdev.net nexops_sample_website1_cloned1_LOCAL_3_be
@@ -36,3 +37,4 @@ gitlab-dev.nexdev.net nexops_gitlab_dev_be
 gitlab-bk.nexdev.net nexops_gitlab_bk_be
 git3-bk.nexdev.net nexops_git3_bk_be
 jenkins.nexdev.net nexops_jenkins_be
+
